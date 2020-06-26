@@ -11,4 +11,10 @@ if [ ! -f $console ]; then
   fi;
 fi;
 
+if [ ! -f ".container" ]; then
+  php $console "$@"
+  exit $?;
+fi
+
+
 dockerexec php $console "$@"
