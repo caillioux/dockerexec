@@ -17,7 +17,7 @@ fi
 
 for param in "$@"
 do
-  if [ "-v" = $param ]; then
+  if [ "-v" = "$param" ]; then
     verbose=1
   else
     user_command="${user_command} \"${param}\""
